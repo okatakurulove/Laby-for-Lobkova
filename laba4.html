@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Больница</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Запись к врачу</h1>
+        <form action="submit.php" method="post">
+            <label for="first_name">Имя:</label>
+            <input type="text" id="first_name" name="first_name" required>
+
+            <label for="last_name">Фамилия:</label>
+            <input type="text" id="last_name" name="last_name" required>
+
+            <label for="middle_name">Отчество:</label>
+            <input type="text" id="middle_name" name="middle_name">
+
+            <label for="birth_date">Дата рождения:</label>
+            <input type="date" id="birth_date" name="birth_date" required>
+
+            <label for="snils">Номер СНИЛС:</label>
+            <input type="text" id="snils" name="snils" required>
+
+            <label for="address">Место проживания:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Номер телефона:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <input type="submit" value="Записаться">
+        </form>
+    </div>
+</body>
+</html>
