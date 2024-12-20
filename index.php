@@ -1,18 +1,18 @@
 <?php
-require 'product.php';
-require 'client.php';
+require 'student.php';
+require 'staff.php';
 
-$product = new Product("Телефон", "Смартфон с большим экраном", 599.99, "Китай");
-echo "Информация о продукте: " . $product->about_product() . " ";
+$student = new Student("Алексей", 20, "Мужской", "101", 2022, "Председатель группы");
+echo "Информация о студенте: " . $student->get_info() . " ";
 
-$product->new_information("Планшет", "Большой экран и высокая производительность", "США");
-$product->new_cost(299.99);
-echo "Обновленная информация о продукте: " . $product->about_product() . " ";
+$student->transfer_to_group("102");
+$student->change_position("Секретарь группы");
+echo "Обновленная информация о студенте: " . $student->get_info() . " ";
 
-$client = new Client("Иван", 1000.00);
-echo "Информация о клиенте: " . $client->about_client() . " ";
+$staff = new Staff("Мария", 35, "Женский", "Преподаватель", 2015, 10, 60000);
+echo "Информация о сотруднике: " . $staff->get_info() . " ";
 
-$client->last_order("Покупка нового телефона");
-$client->all_money(500);
-echo "Обновленная информация о клиенте: " . $client->about_client() . " ";
+$staff->change_position("Зав. кафедрой");
+$staff->change_salary(80000);
+echo "Обновленная информация о сотруднике: " . $staff->get_info() . " ";
 ?>
